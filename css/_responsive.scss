@@ -8,6 +8,10 @@
             width: 450px;
         }
     }
+
+    .director__person {
+        width: 400px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -548,6 +552,19 @@
                 overflow: hidden;
                 width: 161px;
             }
+        }
+    }
+
+    .director {
+        &__container {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__person {
+            height: 395px;
+            width: 100%;
+            object-fit: contain;
         }
     }
 }

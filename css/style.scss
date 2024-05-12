@@ -1434,4 +1434,51 @@ section {
 }
 // Theory end
 
+// Director
+.director {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 95px;
+    }
+
+    &__person {
+        flex-shrink: 0;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    span {
+        width: 100px;
+        height: 4px;
+        border-radius: 4px;
+        background: #5495FF;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+}
+// Director end
+
 @import './responsive';
