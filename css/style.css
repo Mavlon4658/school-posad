@@ -113,6 +113,7 @@ body {
   line-height: 24px;
   font-weight: bold;
   transition: 0.2s ease all;
+  overflow: hidden;
 }
 .btn_blue img {
   transition: 0.2s ease all;
@@ -141,6 +142,7 @@ body {
   line-height: 24;
   font-weight: bold;
   transition: 0.2s ease all;
+  overflow: hidden;
 }
 .btn_yellow .icon {
   transition: 0.2s ease all;
@@ -1215,6 +1217,36 @@ section {
   font-weight: 500;
 }
 
+.get_discount__container {
+  border: 1px solid rgb(237, 237, 237);
+  border-radius: 30px;
+  background: rgb(255, 255, 255);
+  padding: 56px 64px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.get_discount__title {
+  margin-bottom: 6px;
+}
+.get_discount__description {
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+.get_discount__bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.get_discount__people {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+
 @media (max-width: 1160px) {
   .main_container {
     max-width: calc(100% - 60px);
@@ -1640,6 +1672,22 @@ section {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  .get_discount__container {
+    padding: 32px 30px;
+    border-radius: 20px;
+  }
+  .get_discount__title {
+    margin-bottom: 8px;
+  }
+  .get_discount a {
+    width: 100%;
+  }
+  .get_discount__bg {
+    display: none;
+  }
+  .get_discount__people {
+    display: none;
   }
 }
 @media (max-width: 576px) {
