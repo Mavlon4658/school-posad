@@ -49,6 +49,24 @@ let instructorSwp = new Swiper('.instructor .swiper', {
 })
 
 let tarifSwp = new Swiper('.tarif .swiper', {
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     spaceBetween: 20,
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        }
+    }
 })
+
+let tarfiCard = document.querySelectorAll('.tarif .swiper-slide');
+if (tarfiCard.length) {
+    tarfiCard.forEach(el => {
+        let btn = el.querySelector('.show_more'),
+            list = el.querySelector('ul');
+        
+        btn.onclick = () => {
+            list.classList.toggle('active');
+            btn.classList.toggle('active');
+        }
+    })
+}

@@ -375,6 +375,139 @@
             }
         }
     }
+
+    .tarif {
+        &__head {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 36px;
+
+            br {
+                display: block;
+            }
+        }
+
+        .swiper {
+            margin-bottom: 64px;
+
+            &-slide {
+                width: 260px;
+                padding: 36px;
+
+                .title {
+                    margin-bottom: 23px;
+                }
+
+                .price {
+                    margin-bottom: 54px;
+
+                    del {
+                        display: none;
+                    }
+                }
+
+                .discount {
+                    display: inline-block;
+                    padding-bottom: 4px;
+                    margin-bottom: 24px;
+
+                    .alert {
+                        display: none;
+                    }
+                }
+
+                .show_more {
+                    display: inline-flex;
+
+                    &.active {
+                        margin-bottom: 24px;
+
+                        img {
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                }
+
+                ul {
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            padding: 22px 35px 24px 37px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            .logo {
+                height: 24px;
+                margin-bottom: 17px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            h4 {
+                font-size: 22px;
+                margin-bottom: 50px;
+            }
+
+            .person {
+                display: none;
+            }
+
+            .btn_yellow {
+                width: 100%;
+                height: 48px;
+            }
+
+            &_bg {
+                display: none;
+
+                &.sm {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .stage {
+        background: #fff;
+        padding: 40px 0;
+        border-radius: 20px;
+
+        &__title {
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        &__description {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        img {
+            display: none;
+
+            &.sm {
+                width: calc(100% + 48px);
+                transform: translateX(-24px);
+                display: block;
+                height: 490px;
+                object-fit: contain;
+                margin: -24px 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -463,6 +596,14 @@
                 width: calc(100% + 32px);
                 margin-left: -16px;
             }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .stage {
+        img.sm {
+            height: auto;
         }
     }
 }
