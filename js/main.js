@@ -85,3 +85,47 @@ let comfortableSwp = new Swiper('.comfortable .swiper', {
         prevEl: '.comfortable .swiper_btn__prev'
     }
 })
+
+let reviewSwp = new Swiper('.review .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 21,
+    loop: true,
+    breakpoints: {
+        1150: {
+            slidesPerView: 3,
+            spaceBetween: 98,
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    },
+    navigation: {
+        nextEl: '.review .swiper_btn__next',
+        prevEl: '.review .swiper_btn__prev',
+    },
+    pagination: {
+        el: '.review .swiper_pagination',
+        clickable: true,
+    }
+})
+
+let reviewCards = document.querySelectorAll('.review .swiper-slide');
+if (reviewCards.length) {
+    reviewCards.forEach(el => {
+        let btn = el.querySelector('button'),
+            video = el.querySelector('.video');
+        
+        btn.onclick = () => {
+            reviewCards.forEach(item => {
+                if (item != el) {
+                    item.classList.remove('active');
+                    item.querySelector('.video').pause();
+                }
+            })
+            
+            el.classList.add('active');
+            video.currentTime  = 0;
+            video.play();
+        }
+    })
+}

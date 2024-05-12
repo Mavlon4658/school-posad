@@ -1521,4 +1521,156 @@ section {
 }
 // Get discount end
 
+// Review
+.review {
+    &__title {
+        margin-bottom: 58px;
+    }
+
+    .swiper {
+        padding-bottom: 66px;
+
+        &-slide {
+            position: relative;
+            height: 581px;
+            font-family: "Golos Text", sans-serif;
+            line-height: 123%;
+
+            .content {
+                height: 100%;
+            }
+
+            .video {
+                display: none;
+                width: 100%;
+                height: 100%;
+                border-radius: 31px;
+                object-fit: cover;
+            }
+
+            .title {
+                position: absolute;
+                top: 49px;
+                left: 28px;
+                display: flex;
+                align-items: center;
+                gap: 13px;
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span {
+                    display: block;
+                    max-width: 120px;
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+
+            .bg {
+                width: 100%;
+                height: 100%;
+                border-radius: 31px;
+                object-fit: cover;
+            }
+
+            .show_view_text {
+                position: absolute;
+                bottom: 48px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                color: #fff;
+            }
+
+            button {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0px 4px 72px 0px rgba(0, 0, 0, 0.13);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 50%;
+                bottom: -36px;
+                transform: translateX(-50%);
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                    object-fit: contain;
+                    transform: translateX(2px);
+                }
+            }
+
+            &.active {
+                .video {
+                    display: block;
+                }
+
+                .content {
+                    display: none;
+                }
+            }
+        }
+
+        &_pagination {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            margin-bottom: 32px;
+
+            span {
+                opacity: 1;
+                margin: 0 !important;
+                padding: 0;
+                width: 4px;
+                height: 4px;
+                background: #DEDEDE;
+
+                &.swiper-pagination-bullet-active {
+                    background: #2D2D2D;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        a {
+            height: 50px;
+            border-radius: 16px;
+            padding: 0 30px;
+        }
+
+        .swiper_btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        button {
+            border: 1px solid rgba(46, 42, 68, 0.12);
+            border-radius: 16.32px;
+            height: 51px;
+            width: 51px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+    }
+}
+// Review end
+
 @import './responsive';

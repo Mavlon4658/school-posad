@@ -590,6 +590,30 @@
             display: none;
         }
     }
+
+    .review {
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        .swiper {
+            overflow: visible;
+            padding-bottom: 45px;
+
+            &-slide {
+                width: 315px;
+                height: 630px;
+            }
+
+            &_pagination {
+                display: flex;
+            }
+        }
+
+        &__bottom {
+            justify-content: space-between;
+        }
+    }
 }
 
 @media (max-width: 576px) {
