@@ -144,3 +144,22 @@ accordion.forEach((item) => {
         header.classList.toggle('active');
     });
 });
+
+let license = new Swiper('.license .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 64,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        }
+    },
+    pagination: {
+        el: '.license .swiper_pagination',
+        clickable: true,
+    }
+})

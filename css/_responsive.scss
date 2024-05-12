@@ -647,6 +647,37 @@
             }
         }
     }
+
+    .license {
+        &__title {
+            text-align: left;
+        }
+
+        &__description {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .swiper {
+            overflow: visible;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .license {
+        .swiper {
+            margin-bottom: 20px;
+
+            &-slide {
+                width: 240px;
+            }
+
+            &_pagination {
+                display: flex;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {

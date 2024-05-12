@@ -1747,4 +1747,49 @@ section {
 }
 // FAQ end
 
+// License
+.license {
+    &__title {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .swiper {
+        max-width: 848px;
+
+        &-slide {
+            img {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        &_pagination {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+
+            span {
+                width: 4px;
+                height: 4px;
+                opacity: 1;
+                margin: 0 !important;
+                padding: 0;
+                background: #DEDEDE;
+
+                &.swiper-pagination-bullet-active {
+                    background: #2D2D2D;
+                }
+            }
+        }
+    }
+}
+// License end
+
 @import './responsive';
