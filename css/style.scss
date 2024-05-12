@@ -1342,4 +1342,57 @@ section {
 }
 // Stage end
 
+// Comfortable
+.comfortable {
+    &__head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    .swiper_btn {
+        display: flex;
+        gap: 8px;
+
+        button {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(46, 42, 68, 0.12);
+            border-radius: 16.32px;
+            background: rgb(255, 255, 255);
+        }
+    }
+
+    .swiper {
+        max-width: 726px;
+        overflow: visible;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        &-slide {
+            height: 400px;
+
+            &:not(.swiper-slide-active) {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+// Comfortable end
+
 @import './responsive';

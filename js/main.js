@@ -70,3 +70,18 @@ if (tarfiCard.length) {
         }
     })
 }
+
+let comfortableSwp = new Swiper('.comfortable .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 8,
+    loop: true,
+    breakpoints: {
+        992: {
+            spaceBetween: 20,
+        }
+    },
+    navigation: {
+        nextEl: '.comfortable .swiper_btn__next',
+        prevEl: '.comfortable .swiper_btn__prev'
+    }
+})

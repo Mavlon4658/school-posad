@@ -508,6 +508,20 @@
             }
         }
     }
+
+    .comfortable {
+        &__head {
+            margin-bottom: 40px;
+        }
+
+        .swiper_btn {
+            display: none;
+        }
+
+        .swiper-slide {
+            height: 200px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
