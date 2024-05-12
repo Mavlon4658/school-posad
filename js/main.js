@@ -63,7 +63,7 @@ if (tarfiCard.length) {
     tarfiCard.forEach(el => {
         let btn = el.querySelector('.show_more'),
             list = el.querySelector('ul');
-        
+
         btn.onclick = () => {
             list.classList.toggle('active');
             btn.classList.toggle('active');
@@ -114,7 +114,7 @@ if (reviewCards.length) {
     reviewCards.forEach(el => {
         let btn = el.querySelector('button'),
             video = el.querySelector('.video');
-        
+
         btn.onclick = () => {
             reviewCards.forEach(item => {
                 if (item != el) {
@@ -122,10 +122,25 @@ if (reviewCards.length) {
                     item.querySelector('.video').pause();
                 }
             })
-            
+
             el.classList.add('active');
-            video.currentTime  = 0;
+            video.currentTime = 0;
             video.play();
         }
     })
 }
+
+const accordion = document.querySelectorAll('.accordion');
+
+accordion.forEach((item) => {
+    const header = item.querySelector('.accordion__head');
+    const content = item.querySelector('.accordion__body');
+
+    content.style.maxHeight = content.scrollHeight + 'px';
+    header.classList.add('active');
+
+    header.addEventListener('click', () => {
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+        header.classList.toggle('active');
+    });
+});

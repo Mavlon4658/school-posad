@@ -1673,4 +1673,78 @@ section {
 }
 // Review end
 
+// FAQ
+.faq {
+    &__title {
+        margin-bottom: 64px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .accordion {
+        border-radius: 15px;
+        box-shadow: 0px 6px 20px -6px rgba(0, 0, 0, 0.12);
+        background: rgb(255, 255, 255);
+        padding: 24px 24px 32px 32px;
+
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+
+            .icon {
+                width: 44px;
+                height: 44px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #F6F6F6;
+
+                img {
+                    display: none;
+                }
+
+                .minus {
+                    display: block;
+                }
+            }
+
+            &.active {
+                .icon {
+                    img {
+                        display: block;
+                    }
+
+                    .minus {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+
+            p {
+                font-weight: 400;
+                max-width: 881px;
+                padding-top: 8px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+// FAQ end
+
 @import './responsive';

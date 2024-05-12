@@ -614,6 +614,39 @@
             justify-content: space-between;
         }
     }
+
+    .faq {
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        .accordion {
+            padding: 20px 16px;
+
+            &__head {
+                gap: 20px;
+                align-items: flex-start;
+
+                span {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &__body {
+                p {
+                    font-size: 16px;
+                    padding-top: 12px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
