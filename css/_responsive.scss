@@ -522,6 +522,34 @@
             height: 200px;
         }
     }
+
+    .theory {
+        &__container {
+            display: block;
+        }
+
+        &__title {
+            font-size: 28px;
+            max-width: 330px;
+            border: 1px solid red;
+            margin-bottom: 24px;
+
+            img {
+                width: 100%;
+                left: -3px;
+            }
+        }
+
+        ul {
+            flex-wrap: wrap;
+            gap: 12px 8px;
+
+            a {
+                overflow: hidden;
+                width: 161px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
