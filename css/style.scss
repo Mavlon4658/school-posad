@@ -1792,4 +1792,106 @@ section {
 }
 // License end
 
+// Consultation
+.consultation {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 914px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -120px;
+        right: -218px;
+        z-index: -1;
+    }
+
+    &__car {
+        position: absolute;
+        bottom: 28px;
+        right: 266px;
+        z-index: -1;
+    }
+
+    &__content {
+        padding-top: 24px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        line-height: 45px;
+    }
+
+    &__description {
+        margin-bottom: 24px;
+    }
+
+    .expert {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+            border: 2px solid #76AAFF;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .text {
+            h3 {
+                font-weight: bold;
+            }
+
+            p {
+                color: #727272;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__form {
+        width: 354px;
+        flex-shrink: 0;
+        padding: 32px 32px 40px;
+        border: 1px solid rgb(237, 237, 237);
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .form_group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 12px;
+
+            button {
+                height: 60px;
+            }
+        }
+
+        p {
+            text-align: center;
+            color: #4E4E4E;
+
+            a {
+                text-align: center;
+                color: #5495FF;
+            }
+        }
+    }
+}
+// Consultation end
+
 @import './responsive';

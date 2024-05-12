@@ -662,6 +662,24 @@
             overflow: visible;
         }
     }
+
+    .consultation {
+        &__container {
+            display: block;
+        }
+
+        &__bg {
+            display: none;
+        }
+
+        &__car {
+            display: none;
+        }
+
+        &__form {
+            margin: 40px auto 0;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -766,6 +784,12 @@
                 width: calc(100% + 32px);
                 margin-left: -16px;
             }
+        }
+    }
+
+    .consultation {
+        &__form {
+            width: 100%;
         }
     }
 }
