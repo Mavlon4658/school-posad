@@ -263,6 +263,7 @@ section {
         height: 100%;
         z-index: -1;
         object-fit: cover;
+        width: auto;
 
         &.sm {
             display: none;
@@ -410,7 +411,8 @@ section {
         z-index: -1;
         bottom: 0;
         left: -205px;
-        transform: translateY(10px) scale(1.3)
+        transform: translateY(10px) scale(1.3);
+        height: auto;
     }
 
     &__content {
@@ -963,6 +965,7 @@ section {
             top: 0;
             right: 0;
             z-index: -1;
+            height: auto;
         }
     }
 }
@@ -1043,6 +1046,7 @@ section {
         top: 8px;
         right: -48px;
         z-index: -1;
+        height: auto;
     }
 
     ul {
@@ -1309,6 +1313,7 @@ section {
             bottom: 0;
             right: 110px;
             z-index: -1;
+            height: auto;
         }
 
         &_bg {
@@ -1454,6 +1459,7 @@ section {
 
     &__person {
         flex-shrink: 0;
+        height: auto;
     }
 
     &__content {
@@ -1517,6 +1523,7 @@ section {
         left: 0;
         bottom: 0;
         z-index: -1;
+        height: auto;
     }
 
     &__people {
@@ -1525,6 +1532,7 @@ section {
         top: 0;
         height: 100%;
         z-index: -1;
+        width: auto;
     }
 
     &.mb {
@@ -1778,6 +1786,7 @@ section {
             img {
                 width: 100%;
                 cursor: pointer;
+                height: auto;
             }
         }
 

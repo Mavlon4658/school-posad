@@ -237,6 +237,7 @@ section {
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
+  width: auto;
 }
 .home__bg.sm {
   display: none;
@@ -355,6 +356,7 @@ section {
   bottom: 0;
   left: -205px;
   transform: translateY(10px) scale(1.3);
+  height: auto;
 }
 .driving__content {
   border-radius: 30px;
@@ -801,6 +803,7 @@ section {
   top: 0;
   right: 0;
   z-index: -1;
+  height: auto;
 }
 
 .write_review__title {
@@ -860,6 +863,7 @@ section {
   top: 8px;
   right: -48px;
   z-index: -1;
+  height: auto;
 }
 .educational ul {
   display: flex;
@@ -1086,6 +1090,7 @@ section {
   bottom: 0;
   right: 110px;
   z-index: -1;
+  height: auto;
 }
 .tarif__content_bg {
   position: absolute;
@@ -1194,6 +1199,7 @@ section {
 }
 .director__person {
   flex-shrink: 0;
+  height: auto;
 }
 .director__content {
   width: 100%;
@@ -1244,6 +1250,7 @@ section {
   left: 0;
   bottom: 0;
   z-index: -1;
+  height: auto;
 }
 .get_discount__people {
   position: absolute;
@@ -1251,6 +1258,7 @@ section {
   top: 0;
   height: 100%;
   z-index: -1;
+  width: auto;
 }
 .get_discount.mb {
   display: none;
@@ -1456,6 +1464,7 @@ section {
 .license .swiper-slide img {
   width: 100%;
   cursor: pointer;
+  height: auto;
 }
 .license .swiper_pagination {
   display: none;
