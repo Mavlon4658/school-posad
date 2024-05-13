@@ -923,6 +923,12 @@ section {
 .tarif__head ul a.active::before {
   display: block;
 }
+.tarif__body_item {
+  display: none;
+}
+.tarif__body_item.active {
+  display: block;
+}
 .tarif .swiper {
   overflow: visible;
   z-index: 1;
@@ -1245,6 +1251,9 @@ section {
   top: 0;
   height: 100%;
   z-index: -1;
+}
+.get_discount.mb {
+  display: none;
 }
 
 .review__title {
@@ -1949,7 +1958,6 @@ section {
   .theory__title {
     font-size: 28px;
     max-width: 330px;
-    border: 1px solid red;
     margin-bottom: 24px;
   }
   .theory__title img {
@@ -1974,6 +1982,9 @@ section {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .get_discount {
+    display: none;
+  }
   .get_discount__container {
     padding: 32px 30px;
     border-radius: 20px;
@@ -1989,6 +2000,9 @@ section {
   }
   .get_discount__people {
     display: none;
+  }
+  .get_discount.mb {
+    display: block;
   }
   .review__title {
     margin-bottom: 40px;

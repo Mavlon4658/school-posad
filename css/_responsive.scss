@@ -535,7 +535,6 @@
         &__title {
             font-size: 28px;
             max-width: 330px;
-            border: 1px solid red;
             margin-bottom: 24px;
 
             img {
@@ -569,6 +568,8 @@
     }
 
     .get_discount {
+        display: none;
+
         &__container {
             padding: 32px 30px;
             border-radius: 20px;
@@ -588,6 +589,10 @@
 
         &__people {
             display: none;
+        }
+
+        &.mb {
+            display: block;
         }
     }
 

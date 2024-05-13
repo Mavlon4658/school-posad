@@ -74,6 +74,7 @@ if (tarfiCard.length) {
 let comfortableSwp = new Swiper('.comfortable .swiper', {
     slidesPerView: 1,
     spaceBetween: 8,
+    initialSlide: 1,
     loop: true,
     breakpoints: {
         992: {
@@ -136,9 +137,6 @@ accordion.forEach((item) => {
     const header = item.querySelector('.accordion__head');
     const content = item.querySelector('.accordion__body');
 
-    content.style.maxHeight = content.scrollHeight + 'px';
-    header.classList.add('active');
-
     header.addEventListener('click', () => {
         content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
         header.classList.toggle('active');
@@ -163,3 +161,71 @@ let license = new Swiper('.license .swiper', {
         clickable: true,
     }
 })
+
+let planBtn = document.querySelectorAll('.plan__form .step button');
+if (planBtn.length) {
+    planBtn.forEach(btn => {
+        btn.onclick = () => {
+            planBtn.forEach(el => {
+                if (el == btn) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active')
+                }
+            })
+        }
+    })
+}
+
+let certificatImg = document.querySelectorAll('.license .swiper-slide img');
+if (certificatImg.length) {
+    certificatImg.forEach((img, imgID) => {
+        img.onclick = () => {
+            let src = [];
+            certificatImg.forEach(item => {
+                src.push({
+                    'src': item.getAttribute('src'),
+                    'thumb': item.getAttribute('src'),
+                    'subHtml': ''
+                });
+            })
+            if (document.getElementById('lightgallery')) {
+                document.getElementById('lightgallery').remove();
+            }
+            const galleryContainer = document.createElement('div');
+            galleryContainer.id = 'lightgallery';
+            document.body.appendChild(galleryContainer);
+            lightGallery(galleryContainer, {
+                dynamic: true,
+                dynamicEl: src,
+                index: imgID,
+            });
+        }
+    })
+}
+
+let tarifhead = document.querySelectorAll('.tarif__head ul a'),
+    tarifBody = document.querySelectorAll('.tarif__body_item');
+
+if (tarifhead.length) {
+    tarifhead.forEach((hd, hdID) => {
+        hd.onclick = e => {
+            e.preventDefault();
+            tarifBody.forEach((el, idx) => {
+                if (idx == hdID) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            })
+
+            tarifhead.forEach(item => {
+                if (hd == item) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            })
+        }
+    })
+}
